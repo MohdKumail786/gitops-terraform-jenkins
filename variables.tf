@@ -16,5 +16,5 @@ variable "ami" {
   description = "Base AMI to launch the instances"
 
   # Bitnami T2 Micro Ami
-  default = "ami-0ed9277fb7eb570c9"    
+  default = "ami-0b49a4a6e8e22fa16"    
 }
