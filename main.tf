@@ -1,7 +1,7 @@
 # Terraform state will be stored in S3
 terraform {
   backend "s3" {
-    bucket = "terraform-bucket-kumail"
+    bucket = "terraform-bucket-kumail-farooqui"
     key    = "terraform.tfstate"
     region = "us-east-2"
   }
