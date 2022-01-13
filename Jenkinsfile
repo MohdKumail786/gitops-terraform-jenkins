@@ -53,9 +53,9 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            echo "Terraform action is --> ${action}"
+            
 //             sh 'terraform apply -auto-approve'    
-               sh 'terraform ${action} -auto-approve'
+               sh 'terraform destroy -auto-approve'
           }
         }
       }
