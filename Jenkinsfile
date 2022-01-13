@@ -44,7 +44,7 @@ try {
   if (env.BRANCH_NAME == 'main') {
 
     // Run terraform apply
-    stage('apply') {
+    stage('action') {
       node {
         withCredentials([[
           $class: 'AmazonWebServicesCredentialsBinding',
@@ -53,7 +53,9 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh 'terraform apply -auto-approve'
+            echo "Terraform action is --> ${action}"
+//             sh 'terraform apply -auto-approve'    
+               sh 'terraform ${action} -auto-approve'
           }
         }
       }
